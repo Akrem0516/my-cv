@@ -18,7 +18,7 @@
     .component {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
 
     label {
@@ -32,7 +32,17 @@
         color: #bdbdbd;
         font-size: 18px;
     }
-
+    #follow-me{
+        display: flex;
+        justify-content: left;
+        gap: 10px;
+    }
+    #follow-me img{
+        width: 30px;
+    }
+    #follow-me img:hover{
+        cursor: pointer;
+    }
     .copyright {
         color: #bdbdbd;
     }

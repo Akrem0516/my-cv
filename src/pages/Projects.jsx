@@ -1,10 +1,14 @@
-
+import { motion } from "framer-motion";
 
 function Projects() {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0, scale: 0.8 }} // Image starts small and transparent
+            animate={{ opacity: 1, scale: 1 }}   // Fade in and scale to normal
+            transition={{ duration: 0.8, delay: 0.2 }}
+        >
             <h1>Projects</h1>
-        </div>
+        </motion.div>
     )
 }
 

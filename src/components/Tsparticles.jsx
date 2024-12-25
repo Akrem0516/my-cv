@@ -48,14 +48,14 @@ function ParticlesComponent() {
                 },
                 links: {
                     enable: true,
-                    distance: 100, 
-                    color: "#73737345",
+                    distance: 40, 
+                    color: "#0004ff",
                 },
                 move: {
                     enable: true,
                     speed: {
                         min: 0,  // Minimum speed
-                        max: 2,  // Maximum speed
+                        max: 1,  // Maximum speed
                     },
                     random: true,
                 },
