@@ -1,0 +1,4 @@
+#tsparticles{
+    position: absolute;
+    z-index: -1; /* This makes sure the particles stay in the background */
+}

@@ -1,0 +1,35 @@
+
+@media screen and (min-width : 1201px) {
+    
+
+.about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    gap: 5px;
+    color: #ffffffe5;
+}
+.title{
+    font-size: 70px;
+    
+}
+.subtitle{
+    margin: 0;
+}
+.text{
+    margin: 0;
+}
+
+.My-pic {
+    width: 450px;
+    border-radius: 400px;
+    height: 450px;
+}
+}

@@ -1,0 +1,60 @@
+
+a{
+    text-decoration: none;
+}
+@keyframes moving {
+    from {margin-bottom: 0; }
+    to {margin-bottom: 15px; }
+}
+
+
+
+@media screen and (min-width : 1201px){ 
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 40px;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .right{
+        display: flex;
+        align-items: center;
+    }
+    .circle{
+        background-color: #0004ff;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        animation: moving 450ms infinite alternate-reverse;
+    }
+
+    .name{
+        font-size: 22px;
+        color: #ffffffe5;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .Major{
+        font-size: 15px;
+        color: gray;
+        font-family: sans-serif;
+    }
+    .right li{
+        font-size: 15px;
+        list-style-type: none;
+        padding: 3px 15px;
+        font-family: sans-serif;
+    }
+    .right a{
+        color: white;
+    }
+    .right li:nth-child(2){
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+    }
+    
+}
