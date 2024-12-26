@@ -1,0 +1,58 @@
+@media screen and (min-width: 1201px) {
+    .resume {
+        display: flex;
+        flex-direction: column;
+        color: #ffffffe5;
+        width: 1000px;
+        margin: 0 auto;
+        gap: 80px;
+    }
+    .resume span:hover{
+        cursor: pointer;
+    }
+    .resume-title{
+        font-size: 60px;
+        margin: 0;
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .right-part-container{
+        width: 550px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .resume-section{
+        display: flex;
+        width: 1000px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .resume-section h2{
+        margin: 0;
+    }
+    .right-part{
+        display: flex;
+        justify-content: space-between;
+    }
+    .right-part p{
+        margin: 0;
+    }
+    .det{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        gap: 10px;
+    }
+    .det h3{
+        margin: 0;
+    }
+    .det ul{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .resume-line{
+        border: 1px solid rgb(129, 129, 129);
+    }
+}

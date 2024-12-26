@@ -7,8 +7,7 @@ function Header() {
         <nav>
             <Link to="/" className='left'>
                 <div className='circle'></div>
-                <h3 className="name">MEZOURI AKREM OUASSIM</h3>
-                <p className="Major">Web Developer</p>
+                <h3 className="name">MAO .</h3>
             </Link>
             <ul className='right'>
                 <li>
