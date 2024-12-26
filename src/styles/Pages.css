@@ -65,7 +65,12 @@
         flex-direction: column;
         gap: 5px;
     }
-
+    .det img{
+        border-radius: 10px;
+    }
+    .det img:hover{
+        cursor: pointer;
+    }
     .pages-line {
         border: 1px solid rgb(129, 129, 129);
     }

@@ -22,12 +22,12 @@
     .component {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 14px;
     }
 
     label {
         color: white;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -40,11 +40,11 @@
     #follow-me {
         display: flex;
         justify-content: left;
-        gap: 10px;
+        gap: 8px;
     }
 
     #follow-me img {
-        width: 22px;
+        width: 20px;
     }
 
     #follow-me img:hover {

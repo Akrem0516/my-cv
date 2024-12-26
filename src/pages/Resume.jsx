@@ -1,4 +1,4 @@
-import '../styles/Resume.css'
+import '../styles/Pages.css'
 import { MotionDivWrapper } from "../components/MotionDivWrapper"
 
 function Resume() {
@@ -9,10 +9,12 @@ function Resume() {
         window.open('https://solanatravel.com/');
     }
     return (
-        <MotionDivWrapper Class={'resume'}>
-            <h1 className='resume-title'>Resume</h1>
-            <div className="resume-section">
-                <h2>Work <br /> Experience</h2>
+        <MotionDivWrapper Class={'pages'}>
+            <h1 className='pages-title'>Resume</h1>
+            <div className="pages-section">
+                <div className="left-part-container">
+                    <h2>Work <br /> Experience</h2>
+                </div>
                 <div className='right-part-container'>
                     <div className='right-part'>
                         <p>2023 - Present</p>
@@ -58,8 +60,8 @@ function Resume() {
                     </div>
                 </div>
             </div>
-            <div className="resume-line"></div>
-            <div className="resume-section">
+            <div className="pages-line"></div>
+            <div className="pages-section">
                 <h2>Education</h2>
                 <div className="right-part-container">
                     <div className="right-part">
@@ -82,8 +84,8 @@ function Resume() {
                     </div>
                 </div>
             </div>
-            <div className="resume-line"></div>
-            <div className="resume-section">
+            <div className="pages-line"></div>
+            <div className="pages-section">
                 <h2>Languages</h2>
                 <div className="right-part-container">
                     <div className="right-part">
@@ -98,8 +100,8 @@ function Resume() {
                     </div>
                 </div>
             </div>
-            <div className="resume-line"></div>
-            <div className="resume-section">
+            <div className="pages-line"></div>
+            <div className="pages-section">
                 <h2>Skills</h2>
                 <div className="right-part-container">
                     <div className="right-part">

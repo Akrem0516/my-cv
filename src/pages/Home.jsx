@@ -10,10 +10,10 @@ function Home() {
             <MotionImgWrapper PicPath={PicPath} Alt={"Portrait of me"} Class={'My-pic'}></MotionImgWrapper>
 
             <MotionDivWrapper Class={'details'}>
-                <h2 className='title'>Mezouri Akrem Ouassim .</h2>
+                <h2 className='home-title'>Mezouri Akrem Ouassim .</h2>
                 <div className='sub-details'>
                     <h2 className='subtitle'>A bit about me</h2>
-                    <p className='text'>I am a web developer specializing in creating responsive, high-performance websites.
+                    <p className='home-text'>I am a web developer specializing in creating responsive, high-performance websites.
                         I focus on delivering user-friendly designs and optimized solutions to meet diverse needs, with a passion for turning ideas into impactful digital experiences.</p>
                 </div>
             </MotionDivWrapper>
