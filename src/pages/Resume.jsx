@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
 import '../styles/Resume.css'
-
+import { MotionDivWrapper } from "../components/MotionDivWrapper"
 
 function Resume() {
     const LinkToRedbubble = () => {
@@ -10,12 +9,7 @@ function Resume() {
         window.open('https://solanatravel.com/');
     }
     return (
-        <motion.div className='resume'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, delay: 0 }}
-        >
+        <MotionDivWrapper Class={'resume'}>
             <h1 className='resume-title'>Resume</h1>
             <div className="resume-section">
                 <h2>Work <br /> Experience</h2>
@@ -129,7 +123,7 @@ function Resume() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </MotionDivWrapper>
     )
 }
 
