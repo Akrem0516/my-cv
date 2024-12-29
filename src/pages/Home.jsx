@@ -8,7 +8,6 @@ function Home() {
     return (
         <div className='about-me'>
             <MotionImgWrapper PicPath={PicPath} Alt={"Portrait of me"} Class={'My-pic'}></MotionImgWrapper>
-
             <MotionDivWrapper Class={'details'}>
                 <h2 className='home-title'>Mezouri Akrem Ouassim .</h2>
                 <div className='sub-details'>

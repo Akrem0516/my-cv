@@ -1,14 +1,27 @@
-import { motion } from "framer-motion";
+import '../styles/Pages.css'
+import { MotionDivWrapper } from "../components/MotionDivWrapper";
+import Form from '../components/Form'
+
 
 function Contact() {
     return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0.8 }} // Image starts small and transparent
-            animate={{ opacity: 1, scale: 1 }}   // Fade in and scale to normal
-            transition={{ duration: 0.8, delay: 0.2 }}
-        >
-            <h1>Contact</h1>
-        </motion.div>
+        <MotionDivWrapper Class={'pages'}>
+            <div>
+                <h1 className='pages-title'>Contact</h1>
+                <h3>Looking forward to hearing from you</h3>
+            </div>
+            <div className="pages-section">
+                <div className="left-part-container">
+                    <h2>Email</h2>
+                    <p>ouassimakrem@gmail.com</p>
+                </div>
+                <div className='right-part-container'>
+                    <div className='right-part'>
+                        <Form></Form>
+                    </div>
+                </div>
+            </div>
+        </MotionDivWrapper>
     )
 }
 

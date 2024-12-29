@@ -1,0 +1,156 @@
+@media screen and (max-width: 768px){
+    
+}
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .fg {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .form-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .form-item label {
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+
+    .form-item input {
+        border: 1px solid white;
+        padding: 9px;
+        font-size: 12px;
+        font-family: sans-serif;
+        background-color: #0000;
+        color: white;
+    }
+
+    .form-item textarea {
+        border: 1px solid white;
+        padding: 8px;
+        font-family: sans-serif;
+        height: 80px;
+        color: white;
+        font-size: 12px;
+        background-color: #0000;
+    }
+
+    .form-item input:focus {
+        outline: none;
+    }
+
+    .form-item textarea:focus {
+        outline: none;
+    }
+
+    form button {
+        padding: 10px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 2px;
+        transition: 500ms;
+    }
+    form button:hover{
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .fg {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .form-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .form-item label {
+        font-family: sans-serif;
+    }
+
+    .form-item input {
+        border: 1px solid white;
+        padding: 12px;
+        font-size: 16px;
+        font-family: sans-serif;
+        background-color: #0000;
+        color: white;
+    }
+
+    .form-item textarea {
+        border: 1px solid white;
+        padding: 12px;
+        font-family: sans-serif;
+        height: 130px;
+        color: white;
+        font-size: 16px;
+        background-color: #0000;
+    }
+
+    .form-item input:focus {
+        outline: none;
+    }
+
+    .form-item textarea:focus {
+        outline: none;
+    }
+
+    form button {
+        padding: 18px;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        transition: 500ms;
+    }
+    form button:hover{
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        cursor: pointer;
+    }
+
+}
