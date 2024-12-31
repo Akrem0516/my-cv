@@ -30,7 +30,7 @@ function Projects({ globalHidden }) {
                             <p></p>
                             <div className="det">
                                 <Suspense fallback={<div>img is Loading...</div>}>
-                                    <MotionImgWrapper PicPath={project1} Clicked={linktosolana} alt="" />
+                                    <MotionImgWrapper PicPath={project2} Clicked={linktosolana} alt="" />
                                 </Suspense>
                             </div>
                         </div>
@@ -48,7 +48,7 @@ function Projects({ globalHidden }) {
                             <p></p>
                             <div className="det">
                                 <Suspense fallback={<div>img is Loading...</div>}>
-                                    <MotionImgWrapper PicPath={project2} Clicked={linktoliaclothes} alt="" />
+                                    <MotionImgWrapper PicPath={project1} Clicked={linktoliaclothes} alt="" />
                                 </Suspense>
                             </div>
                         </div>
