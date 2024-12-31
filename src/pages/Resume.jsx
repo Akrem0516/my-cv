@@ -11,7 +11,19 @@ function Resume({ globalHidden }) {
     return (
         <div className={globalHidden ? 'hide' : ''}>
             <MotionDivWrapper Class={'pages'}>
-                <h1 className='pages-title'>Resume</h1>
+                <div className='title-container'>
+                    <h1 className='pages-title'>Resume</h1>
+                    <a
+                        className='download-resume'
+                        href="https://drive.google.com/uc?export=download&id=168WYdyrH1an1PanZ6sygpdHV0ST12IW5"
+                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Download
+                    </a>
+                </div>
+
                 <div className="pages-section">
                     <div className="left-part-container">
                         <h2>Work <br /> Experience</h2>

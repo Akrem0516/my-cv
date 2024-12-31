@@ -7,7 +7,9 @@ import { MotionImgWrapper } from "../components/MotionImgWrapper"
 function Home({ globalHidden }) {
     return (
         <div className={`about-me ${globalHidden ? 'hide' : ''}`}>
-            <MotionImgWrapper PicPath={PicPath} Alt={"Portrait of me"} Class={'My-pic'}></MotionImgWrapper>
+            <div>
+            <MotionImgWrapper PicPath={PicPath} Alt={"Portrait of me"} Class={'My-pic'} />
+            </div>
             <MotionDivWrapper Class={'details'}>
                 <h2 className='home-title'>Mezouri Akrem Ouassim .</h2>
                 <div className='sub-details'>

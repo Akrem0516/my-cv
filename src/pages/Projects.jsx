@@ -4,6 +4,7 @@ import '../styles/Pages.css'
 
 import project1 from '../assets/projet2liaclothes.jpg';
 import project2 from '../assets/project1solanatravel.jpg';
+import { MotionImgWrapper } from "../components/MotionImgWrapper";
 
 
 function Projects({ globalHidden }) {
@@ -29,9 +30,8 @@ function Projects({ globalHidden }) {
                             <p></p>
                             <div className="det">
                                 <Suspense fallback={<div>img is Loading...</div>}>
-                                    <img src={project1} onClick={linktosolana} alt="" />
+                                    <MotionImgWrapper PicPath={project1} onClick={linktosolana} alt="" />
                                 </Suspense>
-
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ function Projects({ globalHidden }) {
                             <p></p>
                             <div className="det">
                                 <Suspense fallback={<div>img is Loading...</div>}>
-                                    <img src={project2} onClick={linktoliaclothes} alt="" />
+                                    <MotionImgWrapper PicPath={project2} onClick={linktoliaclothes} alt="" />
                                 </Suspense>
                             </div>
                         </div>

@@ -1,11 +1,8 @@
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .about-me {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        gap: 25px;
     }
 
     .details {
@@ -46,6 +43,10 @@
         width: 150px;
         border-radius: 400px;
     }
+
+    .about-me div {
+        height: 150px;
+    }
 }
 
 
@@ -60,6 +61,7 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
+        height: 254px;
     }
 
     .details {
@@ -100,6 +102,8 @@
         width: 250px;
         border-radius: 400px;
     }
+
+
 }
 
 
@@ -119,6 +123,7 @@
         justify-content: center;
         align-items: center;
         gap: 50px;
+        height: 300px;
     }
 
     .details {
@@ -158,4 +163,5 @@
         width: 300px;
         border-radius: 400px;
     }
+
 }
