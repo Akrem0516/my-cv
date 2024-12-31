@@ -2,20 +2,20 @@ import '../styles/Footer.css'
 import github from '../assets/github-brands-solid.svg'
 import linkedin from '../assets/linkedin-brands-solid.svg'
 
-function Footer() {
+function Footer({ globalHidden }) {
     const LinkToGithub = () => {
-        window.open('https://github.com/Akrem0516',"_blank")
+        window.open('https://github.com/Akrem0516', "_blank")
     }
     const LinkToLinkedin = () => {
-        window.open('https://www.linkedin.com/in/akrem-mezouri','_blank');
+        window.open('https://www.linkedin.com/in/akrem-mezouri', '_blank');
     }
     return (
-        <footer>
+        <footer className={globalHidden ? 'hide' : ''}>
             <div className="line"></div>
             <div className="components">
                 <div className='component'>
                     <label htmlFor="phone-number" >Phone</label>
-                    <span id="phone-number" >+213 549 00 88 80</span>
+                    <span id="phone-number" >+213 777 79 21 57</span>
                 </div>
                 <div className='component'>
                     <label htmlFor="email" >Email</label>

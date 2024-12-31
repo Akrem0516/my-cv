@@ -11,9 +11,9 @@ a {
         margin-bottom: 15px;
     }
 }
-.open{
-    display: flex !important;
-}
+
+
+
 
 @media screen and (max-width: 768px) {
     nav {
@@ -23,7 +23,8 @@ a {
         padding: 2px 6px;
         width: 100%;
         align-items: center;
-        box-sizing: border-box; /* Prevents overflow */
+        box-sizing: border-box;
+        /* Prevents overflow */
     }
 
     .left {
@@ -47,18 +48,31 @@ a {
     }
 
     .right ul {
-        display: none;
-        /* Hide the menu by default */
+        visibility: hidden; /* Initially hide the menu */
+        opacity: 0; /* Make the menu fully transparent */
         position: absolute;
-        top: 22%;
-        left: 46%;
-        transform: translate(-50%, -50%);
-        /* Move the element back by half its width and height */
-        flex-direction: column;
-        gap: 20px;
+        top: -100%; /* Start above the viewport */
+        left: 48%; /* Center horizontally */
+        transform: translateX(-50%) translateY(-100%); /* Move off-screen */
+        flex-direction: column; /* Use column layout for the menu items */
+        display: flex; /* Enable flexbox */
+        gap: 20px; /* Add gap between menu items */
+        pointer-events: none; /* Prevent interaction when hidden */
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, visibility 0s 0.3s;
     }
-
     
+    .right ul.open {
+        visibility: visible; /* Make the menu visible */
+        opacity: 1; /* Make the menu fully opaque */
+        top: 20%; /* Move the menu to its final position */
+        transform: translateX(-50%) translateY(0); /* Slide it into place */
+        pointer-events: all; /* Enable interaction when visible */
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, visibility 0s;
+    }
+    
+
+
+
     .right li {
         font-size: 22px;
         list-style-type: none;
@@ -110,15 +124,26 @@ a {
     }
 
     .right ul {
-        display: none;
-        /* Hide the menu by default */
+        visibility: hidden; /* Initially hide the menu */
+        opacity: 0; /* Make the menu fully transparent */
         position: absolute;
-        top: 30%;
-        left: 49%;
-        transform: translate(-50%, -50%);
-        /* Move the element back by half its width and height */
-        flex-direction: column;
-        gap: 20px;
+        top: -100%; /* Start above the viewport */
+        left: 49%; /* Center horizontally */
+        transform: translateX(-50%) translateY(-100%); /* Move off-screen */
+        flex-direction: column; /* Use column layout for the menu items */
+        display: flex; /* Enable flexbox */
+        gap: 20px; /* Add gap between menu items */
+        pointer-events: none; /* Prevent interaction when hidden */
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, visibility 0s 0.3s;
+    }
+    
+    .right ul.open {
+        visibility: visible; /* Make the menu visible */
+        opacity: 1; /* Make the menu fully opaque */
+        top: 30%; /* Move the menu to its final position */
+        transform: translateX(-50%) translateY(0); /* Slide it into place */
+        pointer-events: all; /* Enable interaction when visible */
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, visibility 0s;
     }
 
 

@@ -1,36 +1,25 @@
 import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 import { Hamburger } from './Hamburger';
-import { useState } from 'react';
 
-function Header({ setGlobalHidden }) {
-    // Correctly destructure useState
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-
-    };
-
+function Header({ setGlobalHidden, globalHidden, toggleMenu, menuOpen, linkClicked }) {
     return (
         <nav>
-            <Link to="/" className="left">
+            <Link to="/" className={`left ${globalHidden ? 'hide' : ''}`}>
                 <div className="circle"></div>
                 <h3 className="name">MAO .</h3>
             </Link>
             <div className="right">
-                {/* Pass toggleMenu to Hamburger */}
-                <Hamburger onClick={toggleMenu} />
-                {/* Dynamically apply 'open' class */}
+                <Hamburger onClick={toggleMenu} setGlobalHidden={setGlobalHidden} globalHidden={globalHidden} />
                 <ul className={menuOpen ? 'open' : ''}>
                     <li>
-                        <Link to="/Resume">Resume</Link>
+                        <Link to="/Resume" onClick={linkClicked}>Resume</Link>
                     </li>
                     <li>
-                        <Link to="/Projects">Projects</Link>
+                        <Link to="/Projects" onClick={linkClicked}>Projects</Link>
                     </li>
                     <li>
-                        <Link to="/Contact">Contact</Link>
+                        <Link to="/Contact" onClick={linkClicked}>Contact</Link>
                     </li>
                 </ul>
             </div>

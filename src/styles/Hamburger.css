@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -8,6 +8,8 @@
         background: none;
         border: none;
         cursor: pointer;
+        transition: transform 0.3s ease;
+        /* Optional, for general transitions */
     }
 
     .hamburger span {
@@ -15,7 +17,23 @@
         width: 100%;
         background: white;
         border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
+
+    /* Rotation when hamburger is active */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(40deg) translateY(10px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        /* Hide the middle line */
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-40deg) translateY(-10px);
+    }
+
 }
 
 
@@ -34,6 +52,8 @@
         background: none;
         border: none;
         cursor: pointer;
+        z-index: 10;
+        /* Ensure it sits on top of other elements */
     }
 
     .hamburger span {
@@ -41,8 +61,25 @@
         width: 100%;
         background: white;
         border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(13px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0; /* Hide the middle line */
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-13px);
     }
 }
+
+
+
+
 
 
 @media screen and (min-width: 1024px) {
