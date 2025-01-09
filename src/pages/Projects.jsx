@@ -2,18 +2,24 @@ import { MotionDivWrapper } from "../components/MotionDivWrapper";
 import React, { Suspense } from 'react';
 import '../styles/Pages.css'
 
-import project1 from '../assets/projet2liaclothes.jpg';
-import project2 from '../assets/project1solanatravel.jpg';
+import project1 from '../assets/project1solanatravel.jpg';
+import project2 from '../assets/projet2liaclothes.jpg';
+
 import { MotionImgWrapper } from "../components/MotionImgWrapper";
 
 
 function Projects({ globalHidden }) {
-    const linktoliaclothes = () => {
-        window.open('https://liaclothes.com/');
+    const  linktosolana = process.env.REACT_APP_SOLANA_LINK
+    const linktoliaclothes = process.env.REACT_APP_LIA_LINK
+
+
+
+    function OpenLink(url){
+        window.open(url);
     }
-    const linktosolana = () => {
-        window.open('https://solanatravel.com/');
-    }
+
+
+
 
     return (
         <div className={globalHidden ? 'hide' : ''}>
@@ -30,7 +36,7 @@ function Projects({ globalHidden }) {
                             <p></p>
                             <div className="det">
                                 <Suspense fallback={<div>img is Loading...</div>}>
-                                    <MotionImgWrapper PicPath={project2} Clicked={linktosolana} alt="" />
+                                    <MotionImgWrapper PicPath={project1} Clicked={OpenLink} url={linktosolana} alt="" />
                                 </Suspense>
                             </div>
                         </div>
@@ -48,7 +54,7 @@ function Projects({ globalHidden }) {
                             <p></p>
                             <div className="det">
                                 <Suspense fallback={<div>img is Loading...</div>}>
-                                    <MotionImgWrapper PicPath={project1} Clicked={linktoliaclothes} alt="" />
+                                    <MotionImgWrapper PicPath={project2}  Clicked={OpenLink} url={linktoliaclothes} alt="" />
                                 </Suspense>
                             </div>
                         </div>
