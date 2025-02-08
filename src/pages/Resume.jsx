@@ -15,7 +15,7 @@ function Resume({ globalHidden }) {
                     <h1 className='pages-title'>Resume</h1>
                     <a
                         className='download-resume'
-                        href="https://drive.google.com/uc?export=download&id=168WYdyrH1an1PanZ6sygpdHV0ST12IW5"
+                        href="https://drive.google.com/file/d/1ViQw6CtG8FskZZFT2p3jiJf3xqDzQIrc/view?usp=sharing"
                         download
                         target="_blank"
                         rel="noopener noreferrer"
@@ -30,7 +30,7 @@ function Resume({ globalHidden }) {
                     </div>
                     <div className='right-part-container'>
                         <div className='right-part'>
-                            <p>2023 - Present</p>
+                            <p>Nov 2023 – Present</p>
                             <div className="det">
                                 <h3>Web Developer and Tourism Agent</h3>
                                 <ul>
@@ -42,7 +42,7 @@ function Resume({ globalHidden }) {
                             </div>
                         </div>
                         <div className='right-part'>
-                            <p>SOY 2023 - EOY 2023</p>
+                            <p>Mar 2023 – Mar 2023</p>
                             <div className="det">
                                 <h3>Social Media Advertising</h3>
                                 <ul>
@@ -51,7 +51,7 @@ function Resume({ globalHidden }) {
                             </div>
                         </div>
                         <div className='right-part'>
-                            <p>Mar 2022 - Mar 2023</p>
+                            <p>Mar 2022 – Mar 2023</p>
                             <div className="det">
                                 <h3>Graphic designer</h3>
                                 <ul>
@@ -62,7 +62,7 @@ function Resume({ globalHidden }) {
                             </div>
                         </div>
                         <div className='right-part'>
-                            <p>SOY 2022 - MOY 2022</p>
+                            <p>Jan 2022 – Mar 2022</p>
                             <div className="det">
                                 <h3>TRAINING CENTER LEADER </h3>
                                 <ul>
