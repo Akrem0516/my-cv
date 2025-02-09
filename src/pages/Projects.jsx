@@ -9,12 +9,12 @@ import { MotionImgWrapper } from "../components/MotionImgWrapper";
 
 
 function Projects({ globalHidden }) {
-    const  linktosolana = process.env.REACT_APP_SOLANA_LINK
+    const linktosolana = process.env.REACT_APP_SOLANA_LINK
     const linktoliaclothes = process.env.REACT_APP_LIA_LINK
 
 
 
-    function OpenLink(url){
+    function OpenLink(url) {
         window.open(url);
     }
 
@@ -54,7 +54,7 @@ function Projects({ globalHidden }) {
                             <p></p>
                             <div className="det">
                                 <Suspense fallback={<div>img is Loading...</div>}>
-                                    <MotionImgWrapper PicPath={project2}  Clicked={OpenLink} url={linktoliaclothes} alt="" />
+                                    <MotionImgWrapper PicPath={project2} Clicked={OpenLink} url={linktoliaclothes} alt="" />
                                 </Suspense>
                             </div>
                         </div>

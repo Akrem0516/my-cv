@@ -6,7 +6,7 @@ function Resume({ globalHidden }) {
         window.open('https://www.redbubble.com/people/akrem05/shop?asc=u', '_blank');
     }
     const LinkToSolana = () => {
-        window.open('https://solanatravel.com/');
+        window.open(process.env.REACT_APP_SOLANA_LINK, "_blank");
     }
     return (
         <div className={globalHidden ? 'hide' : ''}>
