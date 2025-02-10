@@ -43,11 +43,11 @@ function Form() {
             <div className='fg'>
                 <div className='form-item'>
                     <label htmlFor="first-name">First Name</label>
-                    <input type="text" name='first-name' value={formData.firstName} onChange={handleChange} required />
+                    <input type="text" name='firstName' value={formData.firstName} onChange={handleChange} required />
                 </div>
                 <div className='form-item'>
                     <label htmlFor="last-name">Last Name</label>
-                    <input type="text" name='last-name' value={formData.lastName} onChange={handleChange} required />
+                    <input type="text" name='lastName' value={formData.lastName} onChange={handleChange} required />
                 </div>
             </div>
             <div className='fg'>
