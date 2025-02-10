@@ -1,32 +1,68 @@
-
+import { useState } from 'react';
 import '../styles/Form.css'
 
 function Form() {
+
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch(process.env.REACT_APP_API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully!");
+                setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
+            } else {
+                alert("Failed to send message.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred.");
+        }
+    };
     return (
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <div className='fg'>
                 <div className='form-item'>
                     <label htmlFor="first-name">First Name</label>
-                    <input type="text" name='first-name' required />
+                    <input type="text" name='first-name' value={formData.firstName} onChange={handleChange} required />
                 </div>
                 <div className='form-item'>
                     <label htmlFor="last-name">Last Name</label>
-                    <input type="text" name='last-name' required />
+                    <input type="text" name='last-name' value={formData.lastName} onChange={handleChange} required />
                 </div>
             </div>
             <div className='fg'>
                 <div className='form-item'>
                     <label htmlFor="email">Email</label>
-                    <input type="text" name='email' required />
+                    <input type="text" name='email' value={formData.email} onChange={handleChange} required />
                 </div>
                 <div className='form-item'>
                     <label htmlFor="subject">Subject</label>
-                    <input type="text" name='subject' required />
+                    <input type="text" name='subject' value={formData.subject} onChange={handleChange} required />
                 </div>
             </div>
             <div className='form-item'>
                 <label htmlFor="message">Message</label>
-                <textarea name="message" id="message" required></textarea>
+                <textarea name="message" id="message" value={formData.message} onChange={handleChange} required></textarea>
             </div>
             <div></div>
             <button>Submit</button>
