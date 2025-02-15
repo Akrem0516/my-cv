@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import '../styles/Form.css'
+import '../styles/Form.css';
 
 function Form() {
-
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -11,12 +10,26 @@ function Form() {
         message: "",
     });
 
+    const [error, setError] = useState("");
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!validateEmail(formData.email)) {
+            setError("Invalid email format.");
+            return;
+        } else {
+            setError("");
+        }
 
         try {
             const response = await fetch(process.env.REACT_APP_API_URL, {
@@ -38,6 +51,7 @@ function Form() {
             alert("An error occurred.");
         }
     };
+
     return (
         <form onSubmit={handleSubmit}>
             <div className='fg'>
@@ -54,6 +68,7 @@ function Form() {
                 <div className='form-item'>
                     <label htmlFor="email">Email</label>
                     <input type="text" name='email' value={formData.email} onChange={handleChange} required />
+                    {error && <p className="error">{error}</p>}
                 </div>
                 <div className='form-item'>
                     <label htmlFor="subject">Subject</label>
@@ -64,10 +79,9 @@ function Form() {
                 <label htmlFor="message">Message</label>
                 <textarea name="message" id="message" value={formData.message} onChange={handleChange} required></textarea>
             </div>
-            <div></div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </form>
-    )
+    );
 }
 
 export default Form;
