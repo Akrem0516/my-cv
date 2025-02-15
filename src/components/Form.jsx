@@ -44,7 +44,7 @@ function Form() {
                 alert("Message sent successfully!");
                 setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
             } else {
-                alert("Failed to send message.");
+                alert(`Error: ${formData.message}`);
             }
         } catch (error) {
             console.error("Error:", error);
