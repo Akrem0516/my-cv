@@ -40,11 +40,13 @@ function Form() {
                 body: JSON.stringify(formData),
             });
 
+            const data = await response.json();
+
             if (response.ok) {
                 alert("Message sent successfully!");
                 setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
             } else {
-                alert(`Error: ${formData.message}`);
+                alert(`Error: ${data.message}`);
             }
         } catch (error) {
             console.error("Error:", error);
