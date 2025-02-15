@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import '../styles/App.css';
 import { useState } from 'react';
+import Notfound from './404';
 
 export function App() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -32,6 +33,7 @@ export function App() {
                     <Route path="/Projects" element={<Projects globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
                     <Route path="/Resume" element={<Resume globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
                     <Route path="/Contact" element={<Contact globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
+                    <Route path='*' element={<Notfound />} />
                 </Routes>
             </AnimatePresence>
         );
