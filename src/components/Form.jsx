@@ -11,6 +11,7 @@ function Form() {
     });
 
     const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,6 +31,8 @@ function Form() {
         } else {
             setError("");
         }
+
+        setLoading(true);
 
         try {
             const response = await fetch(process.env.REACT_APP_API_URL, {
@@ -51,6 +54,8 @@ function Form() {
         } catch (error) {
             console.error("Error:", error);
             alert("An error occurred.");
+        } finally {
+            setLoading(false); // Set loading to false after the form submission completes
         }
     };
 
@@ -81,7 +86,7 @@ function Form() {
                 <label htmlFor="message">Message</label>
                 <textarea name="message" id="message" value={formData.message} onChange={handleChange} required></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={loading}>{loading ? "Submitting..." : "Submit"}</button>
         </form>
     );
 }
