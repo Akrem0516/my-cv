@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import ParticlesComponent from '../components/Tsparticles';
 import '../styles/App.css';
 
+
 export function App() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [globalHidden, setGlobalHidden] = useState(false);
