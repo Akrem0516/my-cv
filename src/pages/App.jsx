@@ -1,32 +1,40 @@
+import React, { useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from "framer-motion";
 import Home from './Home';
-import Header from "../components/Header";
 import Projects from './Projects';
 import Resume from './Resume';
 import Contact from './Contact';
-import ParticlesComponent from '../components/Tsparticles';
-import Footer from '../components/Footer';
-import { AnimatePresence } from "framer-motion";
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import '../styles/App.css';
-import { useState } from 'react';
 import Notfound from './404';
+import Header from "../components/Header";
+import Footer from '../components/Footer';
+import ParticlesComponent from '../components/Tsparticles';
+import '../styles/App.css';
 
 export function App() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [globalHidden, setGlobalHidden] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
     const linkClicked = () => {
-        setMenuOpen(false); // Close the menu
-        setGlobalHidden(false); // Reset the globalHidden state 
+        setMenuOpen(false);
+        setGlobalHidden(false);
     };
 
-    const AnimatedRoutes = () => {
-        const location = useLocation();
-        return (
+    return (
+        <>
+            <Header
+                setGlobalHidden={setGlobalHidden}
+                globalHidden={globalHidden}
+                toggleMenu={toggleMenu}
+                menuOpen={menuOpen}
+                linkClicked={linkClicked}
+            />
+
             <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Home globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
@@ -36,21 +44,10 @@ export function App() {
                     <Route path='*' element={<Notfound />} />
                 </Routes>
             </AnimatePresence>
-        );
-    };
 
-    return (
-        <Router>
-            <Header
-                setGlobalHidden={setGlobalHidden}
-                globalHidden={globalHidden}
-                toggleMenu={toggleMenu}
-                menuOpen={menuOpen}
-                linkClicked={linkClicked}
-            />
-            <AnimatedRoutes />
             <Footer globalHidden={globalHidden} />
+
             <ParticlesComponent />
-        </Router>
+        </>
     );
 }

@@ -55,7 +55,7 @@ function Form() {
             console.error("Error:", error);
             alert("An error occurred.");
         } finally {
-            setLoading(false); // Set loading to false after the form submission completes
+            setLoading(false);
         }
     };
 

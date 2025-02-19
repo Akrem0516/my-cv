@@ -103,7 +103,7 @@
         border-radius: 10px;
     }
 
-    .det img:hover {
+    img:hover {
         cursor: pointer;
     }
 

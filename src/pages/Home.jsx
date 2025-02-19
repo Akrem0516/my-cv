@@ -5,10 +5,17 @@ import { MotionImgWrapper } from "../components/MotionImgWrapper"
 
 
 function Home({ globalHidden }) {
+    
+    const linkedinprofile = process.env.REACT_APP_LINKEDIN_LINK;
+
+    function OpenLink(url) {
+        window.open(url);
+    }
+
     return (
         <div className={`about-me ${globalHidden ? 'hide' : ''}`}>
             <div>
-            <MotionImgWrapper PicPath={PicPath} Alt={"Portrait of me"} Class={'My-pic'} />
+                <MotionImgWrapper PicPath={PicPath} Alt={"Linkedin link"} Class={'My-pic'} Clicked={OpenLink} url={linkedinprofile} />
             </div>
             <MotionDivWrapper Class={'details'}>
                 <h2 className='home-title'>Mezouri Akrem Ouassim .</h2>
