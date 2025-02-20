@@ -34,7 +34,7 @@ function Projects({ globalHidden }) {
                     <div className='right-part-container'>
                         <div className='right-part'>
                             <p></p>
-                            <div className="det">
+                            <div className="det imagedet">
                                 <Suspense fallback={<div>img is Loading...</div>}>
                                     <MotionImgWrapper PicPath={project1} Clicked={OpenLink} url={linktosolana} alt="" />
                                 </Suspense>
