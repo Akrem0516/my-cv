@@ -1,11 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css';
 import { Hamburger } from './Hamburger';
 
 function Header({ setGlobalHidden, globalHidden, toggleMenu, menuOpen, linkClicked }) {
+    const location = useLocation();
+
+    const handleLogoClick = (event) => {
+        if (location.pathname === '/') {
+            event.preventDefault(); // Prevent React Router navigation
+            window.location.reload(); // Force reload
+        }
+    };
     return (
         <nav>
-            <Link to="/" className={`left ${globalHidden ? 'hide' : ''}`}>
+            <Link to="/" className={`left ${globalHidden ? 'hide' : ''}`} onClick={handleLogoClick}>
                 <div className="circle"></div>
                 <h3 className="name">MAO .</h3>
             </Link>
