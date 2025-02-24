@@ -42,7 +42,7 @@ export function App() {
                     <Route path="/Projects" element={<Projects globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
                     <Route path="/Resume" element={<Resume globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
                     <Route path="/Contact" element={<Contact globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
-                    <Route path='*' element={<Notfound />} />
+                    <Route path='*' element={<Notfound globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
                 </Routes>
             </AnimatePresence>
 
