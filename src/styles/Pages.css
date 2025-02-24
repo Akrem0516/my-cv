@@ -6,6 +6,7 @@
         width: 280px;
         margin: 0 auto;
         gap: 50px;
+        font-size: 12px;
     }
 
     .title-container {
@@ -22,7 +23,7 @@
     }
 
     .page-top h3 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .pages span:hover {
@@ -30,7 +31,7 @@
     }
 
     .pages-title {
-        font-size: 40px;
+        font-size: 25px;
         margin: 0;
         width: 100%;
     }

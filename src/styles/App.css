@@ -16,16 +16,6 @@ body {
     pointer-events: none;
 }
 
-
-@media screen and (max-width: 768px) {
-    #root {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
 a,
 button {
     -webkit-tap-highlight-color: transparent;
@@ -33,6 +23,18 @@ button {
 
 
 
+
+
+
+
+@media screen and (max-width: 768px) {
+    #root {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
 
 
 
@@ -45,10 +47,6 @@ button {
         gap: 110px;
     }
 }
-
-
-
-
 
 
 
