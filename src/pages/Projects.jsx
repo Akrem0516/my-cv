@@ -4,6 +4,7 @@ import '../styles/Pages.css'
 
 import project1 from '../assets/project1solanatravel.jpg';
 import project2 from '../assets/projet2liaclothes.jpg';
+import project3 from '../assets/project3ghebghoubcv.jpg'
 
 import { MotionImgWrapper } from "../components/MotionImgWrapper";
 
@@ -11,6 +12,7 @@ import { MotionImgWrapper } from "../components/MotionImgWrapper";
 function Projects({ globalHidden }) {
     const linktosolana = process.env.REACT_APP_SOLANA_LINK
     const linktoliaclothes = process.env.REACT_APP_LIA_LINK
+    const linktoghebghoubcv = 'https://ghebghoubcv.vercel.app/'
 
 
 
@@ -55,6 +57,26 @@ function Projects({ globalHidden }) {
                             <div className="det">
                                 <Suspense fallback={<div>img is Loading...</div>}>
                                     <MotionImgWrapper PicPath={project2} Clicked={OpenLink} url={linktoliaclothes} alt="" />
+                                </Suspense>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="pages-line"></div>
+                <div className="pages-section">
+                    <div className="left-part-container">
+                        <h2>Abdelmalek Ghebghoub Portfolio <br /> <em><small>Personal Portfolio Website</small></em></h2>
+                        <p>Built and deployed a personal portfolio website for Abdelmalek Ghebghoub using modern web development technologies.
+                            Designed to showcase professional experience, skills, projects, and contact information in a clean, responsive, and visually engaging format.
+                            Implemented interactive navigation, optimized layout for both desktop and mobile devices, and ensured fast performance and accessibility.
+                            Delivered a polished online presence that effectively highlights the owner’s background and capabilities to potential employers or clients.</p>
+                    </div>
+                    <div className='right-part-container'>
+                        <div className='right-part'>
+                            <p></p>
+                            <div className="det">
+                                <Suspense fallback={<div>img is Loading...</div>}>
+                                    <MotionImgWrapper PicPath={project3} Clicked={OpenLink} url={linktoghebghoubcv} alt="" />
                                 </Suspense>
                             </div>
                         </div>
