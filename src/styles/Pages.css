@@ -47,6 +47,15 @@
         margin: 0;
     }
 
+    .left-part-container img {
+        width: 23px;
+    }
+
+    .left-part-container img:hover {
+        cursor: pointer;
+    }
+
+
     .right-part-container {
         width: 280px;
         display: flex;
@@ -162,6 +171,14 @@
         width: 340px;
     }
 
+    .left-part-container img {
+        width: 30px;
+    }
+
+    .left-part-container img:hover {
+        cursor: pointer;
+    }
+
     .right-part-container {
         width: 410px;
         display: flex;
@@ -266,6 +283,14 @@
 
     .left-part-container {
         width: 450px;
+    }
+
+    .left-part-container img {
+        width: 30px;
+    }
+
+    .left-part-container img:hover {
+        cursor: pointer;
     }
 
     .right-part-container {

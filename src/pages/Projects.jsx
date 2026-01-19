@@ -5,6 +5,8 @@ import '../styles/Pages.css'
 import project1 from '../assets/project1solanatravel.jpg';
 import project2 from '../assets/projet2liaclothes.jpg';
 import project3 from '../assets/project3ghebghoubcv.jpg'
+import github from '../assets/github-brands-solid.svg'
+
 
 import { MotionImgWrapper } from "../components/MotionImgWrapper";
 
@@ -19,8 +21,13 @@ function Projects({ globalHidden }) {
     function OpenLink(url) {
         window.open(url);
     }
+    const LinkToGithubsolana = () => {
+        window.open('https://github.com/Akrem0516/solana-website', "_blank")
+    }
 
-
+    const LinkToGithubGhebghoubCv = () => {
+        window.open('https://github.com/Akrem0516/ghebghoubcv', "_blank")
+    }
 
 
     return (
@@ -32,6 +39,7 @@ function Projects({ globalHidden }) {
                         <h2>Solana Travel <br /> <em><small>Landing page</small></em> </h2>
                         <p>Developed a responsive website for Solana Travel, a travel agency based in Algeria. Utilized HTML, CSS, and JavaScript to create a user-friendly interface featuring service descriptions,
                             client testimonials, and contact information. Ensured cross-browser compatibility and optimized performance for various devices.</p>
+                        <img src={github} onClick={LinkToGithubsolana} alt="github-logo" />
                     </div>
                     <div className='right-part-container'>
                         <div className='right-part'>
@@ -50,6 +58,7 @@ function Projects({ globalHidden }) {
                         <h2>Lia clothes <br /> <em><small>E-commerce website</small></em></h2>
                         <p>Built and customized an e-commerce website for LiaClothes using the YouCan platform. Enhanced functionality with custom JavaScript to improve
                             user experience and interactivity. Delivered a fully responsive and visually appealing design, optimized for seamless navigation and mobile compatibility.</p>
+
                     </div>
                     <div className='right-part-container'>
                         <div className='right-part'>
@@ -70,6 +79,7 @@ function Projects({ globalHidden }) {
                             Designed to showcase professional experience, skills, projects, and contact information in a clean, responsive, and visually engaging format.
                             Implemented interactive navigation, optimized layout for both desktop and mobile devices, and ensured fast performance and accessibility.
                             Delivered a polished online presence that effectively highlights the owner’s background and capabilities to potential employers or clients.</p>
+                        <img src={github} onClick={LinkToGithubGhebghoubCv} alt="github-logo" />
                     </div>
                     <div className='right-part-container'>
                         <div className='right-part'>
