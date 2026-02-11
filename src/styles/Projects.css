@@ -1,0 +1,9 @@
+@media screen and (min-width: 1024px) {
+    .project-details {
+        display: flex;
+        flex-direction: column;
+        color: #ffffffe5;
+        width: 1000px;
+        margin: 0 auto;
+    }
+}

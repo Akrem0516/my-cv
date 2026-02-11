@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
 import Home from './Home';
 import Projects from './Projects';
+
 import Resume from './Resume';
 import Contact from './Contact';
 import Notfound from './404';
@@ -40,6 +41,7 @@ export function App() {
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Home globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
                     <Route path="/Projects" element={<Projects globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
+
                     <Route path="/Resume" element={<Resume globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
                     <Route path="/Contact" element={<Contact globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
                     <Route path='*' element={<Notfound globalHidden={globalHidden} toggleGlobalHidden={linkClicked} />} />
